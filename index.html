@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102c35">
+<title>Jom Mulakan Misi: Puasa! | Pendidikan Islam Tahun 4</title>
+<style>
+:root{
+ --ink:#17343a;--muted:#526c70;--cream:#fff9ed;--paper:#ffffff;--teal:#145b59;
+ --mint:#d9f3e6;--lime:#c9ef83;--coral:#ff826e;--gold:#ffd36d;--lav:#e9e2ff;
+ --line:#dce8df;--shadow:0 18px 45px rgba(23,52,58,.10);--radius:24px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",Arial,sans-serif;line-height:1.6}
+a{color:inherit}
+button,input{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,249,237,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand{font-weight:900;letter-spacing:-.04em;display:flex;align-items:center;gap:10px}
+.brand-mark{width:40px;height:40px;border-radius:14px;background:var(--teal);color:white;display:grid;place-items:center;font-size:22px}
+.navlinks{display:flex;gap:8px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;padding:8px 11px;border-radius:999px;font-size:.88rem;font-weight:800;color:var(--muted)}
+.navlinks a:hover{background:var(--mint);color:var(--teal)}
+.hero{position:relative;overflow:hidden;padding:66px 0 58px;background:linear-gradient(135deg,#123d43 0%,#176763 58%,#288477 100%);color:#fff}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.hero:before{width:390px;height:390px;right:-80px;top:-170px;background:rgba(201,239,131,.16)}
+.hero:after{width:220px;height:220px;right:24%;bottom:-160px;background:rgba(255,130,110,.2)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:36px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 12px;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2.6rem,6vw,5.3rem);line-height:.98;letter-spacing:-.065em;margin:20px 0}
+h1 span{color:var(--lime)}
+.hero p{font-size:1.12rem;color:#e0f2eb;max-width:600px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.btn{border:0;border-radius:999px;padding:12px 19px;font-weight:900;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--lime);color:#183d37;box-shadow:0 8px 0 rgba(0,0,0,.12)}
+.btn-light{background:white;color:var(--teal)}
+.btn-outline{background:transparent;color:inherit;border:1px solid currentColor}
+.hero-art{min-height:310px;position:relative;display:grid;place-items:center}
+.moon{position:absolute;top:10px;right:24%;width:82px;height:82px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 15px rgba(255,211,109,.12)}
+.star{position:absolute;font-size:30px;color:var(--gold);animation:float 3.2s ease-in-out infinite}
+.star.s1{left:10%;top:17%}.star.s2{right:9%;top:45%;animation-delay:.7s}.star.s3{left:19%;bottom:16%;animation-delay:1.1s}
+.mascot{position:relative;width:210px;height:225px;border-radius:100px 100px 70px 70px;background:#f9d8a7;border:7px solid #fff2d8;box-shadow:0 22px 0 rgba(0,0,0,.12);display:flex;align-items:center;flex-direction:column;padding-top:48px;transform:rotate(-3deg)}
+.mascot:before{content:"";position:absolute;top:-25px;width:175px;height:95px;background:#f5f0dc;border:7px solid #fff2d8;border-radius:90px 90px 30px 30px}
+.face{z-index:1;width:94px;height:78px;background:#e7a978;border-radius:45% 45% 48% 48%;position:relative;margin-top:7px}
+.eye{position:absolute;top:30px;width:8px;height:12px;border-radius:50%;background:#17343a}.eye.left{left:24px}.eye.right{right:24px}
+.smile{position:absolute;width:24px;height:12px;border-bottom:4px solid #8b3e39;border-radius:50%;bottom:17px;left:35px}
+.body-mascot{position:absolute;bottom:-7px;width:130px;height:84px;background:var(--coral);border-radius:65px 65px 45px 45px;border:6px solid #fff2d8}
+.mascot-tag{position:absolute;bottom:-26px;background:white;color:var(--teal);padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:900;box-shadow:var(--shadow)}
+@keyframes float{50%{transform:translateY(-10px) rotate(10deg)}}
+section{padding:62px 0}
+.section-head{max-width:760px;margin-bottom:26px}
+.kicker{color:#26746c;font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.05em;margin:8px 0 12px}
+.lead{font-size:1.05rem;color:var(--muted);margin:0}
+.grid{display:grid;gap:18px}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.card h3{margin:10px 0 8px;font-size:1.22rem;letter-spacing:-.025em}
+.card p{color:var(--muted);margin:0}
+.iconbox{width:54px;height:54px;display:grid;place-items:center;border-radius:17px;font-size:27px;background:var(--mint)}
+.iconbox.coral{background:#ffe0d9}.iconbox.gold{background:#fff0c6}.iconbox.lav{background:var(--lav)}
+.number{font-size:.78rem;font-weight:900;letter-spacing:.1em;color:#28736b}
+.lesson-band{background:#e9f5e9}
+.arabic{font-family:"Times New Roman",serif;font-size:1.8rem;line-height:2.1;text-align:right;color:#174e49;direction:rtl}
+.translation{border-left:4px solid var(--coral);padding:12px 16px;background:#fff4ef;border-radius:0 14px 14px 0;margin-top:12px}
+.pill{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--mint);color:var(--teal);font-size:.78rem;font-weight:900}
+.list-clean{list-style:none;padding:0;margin:15px 0 0;display:grid;gap:10px}
+.list-clean li{display:flex;gap:10px;align-items:flex-start}
+.tick{flex:0 0 26px;width:26px;height:26px;border-radius:9px;background:var(--lime);display:grid;place-items:center;font-weight:900}
+.activity-card{display:flex;flex-direction:column;gap:12px}
+.activity-card .btn{align-self:flex-start;margin-top:auto}
+.quizbox{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(20px,4vw,36px);box-shadow:var(--shadow)}
+.progress-row{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:.9rem;font-weight:800}
+.progress{height:10px;background:#eaf0e8;border-radius:99px;overflow:hidden;margin:12px 0 25px}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#2a8276,#c9ef83);transition:width .25s}
+.question{font-size:1.3rem;font-weight:900;line-height:1.35;margin:0 0 18px}
+.answers{display:grid;gap:10px}
+.answer{background:#fffdf8;border:2px solid var(--line);border-radius:15px;padding:13px 16px;text-align:left;color:var(--ink);font-weight:750}
+.answer:hover{border-color:#75b9a1;background:#f4fbf5}
+.answer.selected{border-color:var(--teal);background:#e7f7ee}
+.answer.correct{border-color:#4a9a62;background:#e5f8e9}
+.answer.wrong{border-color:#d96959;background:#fff0ed}
+.feedback{min-height:30px;margin:14px 0;color:var(--muted);font-weight:800}
+.quiz-controls{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.small{font-size:.88rem;color:var(--muted)}
+.hidden{display:none!important}
+.match-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.match-row select,.field{width:100%;border:2px solid var(--line);background:#fffdf8;padding:12px;border-radius:14px;color:var(--ink)}
+.sort-items{display:grid;gap:10px}
+.sort-item{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);border-radius:14px;padding:12px;background:#fffdf8}
+.sort-buttons{display:flex;gap:6px}
+.sort-buttons button{border:0;background:var(--mint);border-radius:9px;padding:5px 10px;font-weight:900;color:var(--teal)}
+.notice{padding:13px 16px;border-radius:14px;background:#fff0c8;color:#5f4b17;font-weight:700}
+.score-big{font-size:3.4rem;font-weight:1000;letter-spacing:-.07em;color:var(--teal);line-height:1}
+.footer{background:#123d43;color:#e7f3ed;padding:38px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:22px;align-items:center;flex-wrap:wrap}
+.backtop{position:fixed;right:18px;bottom:18px;z-index:10;border:0;border-radius:50%;width:48px;height:48px;background:var(--coral);color:#fff;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:270px;max-width:420px;width:100%;margin:auto}.grid-3{grid-template-columns:1fr 1fr}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:3px}.navlinks a{font-size:.82rem;padding:7px 9px}}
+@media(max-width:580px){.wrap{width:min(100% - 26px,1180px)}.hero{padding:46px 0 35px}.hero-art{min-height:245px}.mascot{transform:scale(.88) rotate(-3deg)}section{padding:45px 0}.grid-3,.grid-2{grid-template-columns:1fr}.card{padding:20px}.match-row{grid-template-columns:1fr}.navlinks{display:grid;grid-template-columns:repeat(3,auto)}.brand{font-size:.94rem}.quiz-controls .btn{flex:1}.hero p{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="wrap nav">
+  <a class="brand" href="#utama" style="text-decoration:none"><span class="brand-mark">☾</span><span>JOM MULAKAN MISI: PUASA!</span></a>
+  <nav class="navlinks" aria-label="Navigasi utama">
+   <a href="#pengenalan">Pengenalan</a><a href="#belajar">Pembelajaran</a><a href="#aktiviti">Aktiviti</a><a href="#kuiz">Kuiz</a><a href="#refleksi">Refleksi</a>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="utama">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">✦ Pendidikan Islam · Tahun 4</div>
+   <h1>BULAN PENYUCIAN JIWA:<br><span>PUASA</span></h1>
+   <p>Hai, murid hebat! Bersedia untuk meneroka maksud puasa, dalil, rukun serta syarat wajib dan sah puasa Ramadan? Lengkapkan misi pembelajaran dan uji pengetahuan kamu.</p>
+   <div class="actions"><a class="btn btn-primary" href="#pengenalan">🚀 Mulakan misi</a><a class="btn btn-light" href="#kuiz">✦ Cuba kuiz kendiri</a></div>
+   <p class="small" style="color:#d7eee4;margin-top:20px">Misi pembelajaran • Aktiviti interaktif • Kuiz 15 soalan</p>
+  </div>
+  <div class="hero-art" aria-label="Ilustrasi kartun murid">
+   <div class="moon"></div><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span>
+   <div class="mascot"><div class="face"><i class="eye left"></i><i class="eye right"></i><i class="smile"></i></div><div class="body-mascot"></div><div class="mascot-tag">Jom belajar bersama!</div></div>
+  </div>
+ </div>
+</section>
+<section id="pengenalan">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Misi 01 · Kenali puasa</div><h2>Apa itu puasa?</h2><p class="lead">Puasa mengajar kita menahan diri dan mendidik jiwa supaya menjadi insan yang bertakwa.</p></div>
+  <div class="grid grid-3">
+   <article class="card"><div class="iconbox">🌅</div><h3>Menahan diri</h3><p>Menahan diri daripada perkara-perkara yang membatalkan puasa.</p></article>
+   <article class="card"><div class="iconbox coral">⏰</div><h3>Waktu berpuasa</h3><p>Bermula daripada terbit fajar hingga terbenam matahari.</p></article>
+   <article class="card"><div class="iconbox gold">💚</div><h3>Disertai niat</h3><p>Puasa dilakukan dengan niat kerana Allah SWT.</p></article>
+  </div>
+ </div>
+</section>
+<section class="lesson-band" id="belajar">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Misi 02 · Dalil dan hukum</div><h2>Mengapa kita berpuasa?</h2><p class="lead">Dalil naqli menerangkan kewajipan puasa Ramadan kepada orang yang beriman.</p></div>
+  <div class="card">
+   <span class="pill">Surah al-Baqarah · Ayat 183</span>
+   <div class="arabic" lang="ar" dir="rtl">يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ</div>
+   <div class="translation"><strong>Maksudnya:</strong> “Wahai orang-orang yang beriman, kamu diwajibkan berpuasa sebagaimana diwajibkan atas orang-orang yang dahulu dari kamu, supaya kamu bertakwa.”</div>
+   <p style="margin-top:18px"><strong>Hukum puasa Ramadan:</strong> Wajib bagi umat Islam yang mampu menunaikan puasa pada bulan Ramadan.</p>
+  </div>
+ </div>
+</section>
+<section>
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Misi 03 · Fahami rukun</div><h2>Dua rukun puasa</h2><p class="lead">Ingat dua perkara utama ini untuk melengkapkan rukun puasa.</p></div>
+  <div class="grid grid-2">
+   <article class="card"><div class="iconbox lav">🤲</div><span class="number">RUKUN 01</span><h3>Niat puasa</h3>
+    <div class="arabic" lang="ar" dir="rtl">نَوَيْتُ صَوْمَ غَدٍ عَنْ أَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ لِلَّهِ تَعَالَى</div>
+    <p><strong>Maksud:</strong> Sahaja aku berpuasa esok hari untuk menunaikan fardu Ramadan tahun ini kerana Allah Taala.</p>
+   </article>
+   <article class="card"><div class="iconbox coral">🛡️</div><span class="number">RUKUN 02</span><h3>Tidak melakukan perkara yang membatalkan puasa</h3><p>Sepanjang tempoh berpuasa, seseorang perlu menjaga puasanya daripada perkara yang membatalkannya.</p></article>
+  </div>
+ </div>
+</section>
+<section class="lesson-band">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Misi 04 · Syarat puasa</div><h2>Wajib atau sah?</h2><p class="lead">Syarat wajib menerangkan siapa yang diwajibkan berpuasa. Syarat sah pula menerangkan keadaan yang diperlukan supaya puasa sah.</p></div>
+  <div class="grid grid-2">
+   <article class="card"><div class="iconbox gold">📌</div><h3>4 syarat wajib puasa</h3><ul class="list-clean"><li><span class="tick">1</span><span><strong>Islam</strong> — tidak wajib bagi orang kafir.</span></li><li><span class="tick">2</span><span><strong>Baligh</strong> — kanak-kanak tidak diwajibkan berpuasa.</span></li><li><span class="tick">3</span><span><strong>Berakal</strong> — orang gila tidak diwajibkan berpuasa.</span></li><li><span class="tick">4</span><span><strong>Mampu</strong> — tidak uzur dan tidak sakit.</span></li></ul></article>
+   <article class="card"><div class="iconbox">✅</div><h3>4 syarat sah puasa</h3><ul class="list-clean"><li><span class="tick">1</span><span><strong>Islam</strong> — orang bukan Islam tidak sah puasa.</span></li><li><span class="tick">2</span><span><strong>Suci daripada haid, nifas dan wiladah</strong> — khusus bagi wanita.</span></li><li><span class="tick">3</span><span><strong>Berakal (mumayyiz)</strong> — bahan rujukan menyatakan tidak sah puasa orang gila, pengsan dan belum mumayyiz.</span></li><li><span class="tick">4</span><span><strong>Bertepatan dengan waktunya</strong> — bukan pada hari yang diharamkan berpuasa seperti Aidilfitri dan Aidiladha.</span></li></ul></article>
+  </div>
+ </div>
+</section>
+<section id="aktiviti">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Misi 05 · Cabaran interaktif</div><h2>Jom uji kefahaman!</h2><p class="lead">Lengkapkan empat aktiviti. Baca arahan, pilih jawapan dan semak maklum balas kamu.</p></div>
+  <div class="grid grid-2">
+   <article class="card activity-card"><div class="iconbox coral">🎯</div><span class="number">AKTIVITI 1 · MUDAH</span><h3>Cabaran pilihan jawapan</h3><p>Pilih jawapan yang tepat tentang maksud dan hukum puasa.</p><button class="btn btn-primary" onclick="showActivity('act1')">Mula aktiviti →</button></article>
+   <article class="card activity-card"><div class="iconbox gold">⚖️</div><span class="number">AKTIVITI 2 · MUDAH</span><h3>Betul atau salah?</h3><p>Tentukan sama ada kenyataan tentang puasa adalah betul atau salah.</p><button class="btn btn-primary" onclick="showActivity('act2')">Mula aktiviti →</button></article>
+   <article class="card activity-card"><div class="iconbox lav">🧩</div><span class="number">AKTIVITI 3 · SEDERHANA</span><h3>Padankan syarat</h3><p>Padankan setiap syarat dengan kategorinya.</p><button class="btn btn-primary" onclick="showActivity('act3')">Mula aktiviti →</button></article>
+   <article class="card activity-card"><div class="iconbox">🔢</div><span class="number">AKTIVITI 4 · SEDERHANA</span><h3>Susun dan ingat</h3><p>Susun semula dua rukun puasa dalam turutan yang dipaparkan dalam bahan pembelajaran.</p><button class="btn btn-primary" onclick="showActivity('act4')">Mula aktiviti →</button></article>
+  </div>
+  <div id="activity-stage" class="quizbox hidden" style="margin-top:22px" aria-live="polite"></div>
+ </div>
+</section>
+<section class="lesson-band" id="kuiz">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Misi akhir · Kuiz kendiri</div><h2>15 soalan untuk kamu!</h2><p class="lead">Jawab semua soalan untuk melihat markah dan maklum balas. Setiap soalan bernilai 1 markah.</p></div>
+  <div class="quizbox" id="quizbox">
+   <div class="progress-row"><span id="q-counter">Soalan 1 daripada 15</span><span id="q-score">Markah: 0</span></div>
+   <div class="progress"><span id="q-progress"></span></div>
+   <div id="question-area"></div>
+   <div class="feedback" id="quiz-feedback" aria-live="polite"></div>
+   <div class="quiz-controls"><button class="btn btn-outline" id="restart-quiz" onclick="restartQuiz()">↻ Mula semula</button><button class="btn btn-primary" id="next-question" onclick="nextQuestion()">Semak jawapan</button></div>
+   <div id="quiz-result" class="hidden" style="margin-top:24px"></div>
+  </div>
+ </div>
+</section>
+<section id="refleksi">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Misi penutup</div><h2>Semak kemajuan diri</h2><p class="lead">Tandakan perkara yang sudah kamu kuasai selepas menyelesaikan pembelajaran.</p></div>
+  <div class="card">
+   <div id="reflection-list" class="list-clean">
+    <label class="sort-item"><span>☑ Saya boleh menyatakan maksud puasa Ramadan.</span><input type="checkbox"></label>
+    <label class="sort-item"><span>☑ Saya boleh menyebut hukum puasa berdasarkan Surah al-Baqarah ayat 183.</span><input type="checkbox"></label>
+    <label class="sort-item"><span>☑ Saya boleh menyenaraikan dua rukun puasa.</span><input type="checkbox"></label>
+    <label class="sort-item"><span>☑ Saya boleh menyatakan empat syarat wajib dan empat syarat sah puasa.</span><input type="checkbox"></label>
+   </div>
+   <p id="reflection-message" class="notice" style="margin-top:18px">Teruskan usaha! Tandakan kemahiran yang sudah kamu kuasai.</p>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><div><strong>JOM MULAKAN MISI: PUASA!</strong><div class="small" style="color:#d7eee4">Pendidikan Islam · Tahun 4 · Bidang Ibadah</div></div><div class="small" style="color:#d7eee4">Belajar dengan gembira, beribadah dengan ikhlas. ☾</div></div></footer>
+<button class="backtop" aria-label="Kembali ke atas" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const activities = {
+ act1:{title:"Aktiviti 1: Cabaran pilihan jawapan",intro:"Pilih satu jawapan bagi setiap soalan.",questions:[
+ {q:"Puasa bermaksud menahan diri daripada perkara yang membatalkan puasa bermula…",a:["Selepas matahari terbenam hingga tengah malam","Daripada terbit fajar hingga terbenam matahari, disertai niat","Dari tengah malam hingga waktu Subuh"],correct:1,why:"Betul! Puasa bermula daripada terbit fajar hingga terbenam matahari dan disertai niat."},
+ {q:"Apakah hukum puasa Ramadan bagi umat Islam yang mampu?",a:["Sunat","Harus","Wajib"],correct:2,why:"Betul! Puasa Ramadan diwajibkan kepada umat Islam yang mampu."}
+ ]},
+ act2:{title:"Aktiviti 2: Betul atau salah?",intro:"Pilih Betul atau Salah bagi setiap kenyataan.",questions:[
+ {q:"Islam ialah salah satu syarat wajib dan syarat sah puasa.",a:["Betul","Salah"],correct:0,why:"Betul! Islam disenaraikan dalam syarat wajib dan syarat sah puasa."},
+ {q:"Hari Raya Aidilfitri ialah hari yang sesuai untuk berpuasa.",a:["Betul","Salah"],correct:1,why:"Tepat! Aidilfitri ialah antara hari yang diharamkan berpuasa."},
+ {q:"Niat ialah salah satu rukun puasa.",a:["Betul","Salah"],correct:0,why:"Betul! Niat ialah rukun pertama yang disenaraikan dalam bahan pembelajaran."}
+ ]},
+ act3:{title:"Aktiviti 3: Padankan syarat",intro:"Pilih kategori yang tepat bagi setiap syarat.",matching:[
+ {term:"Islam",opts:["Syarat wajib dan syarat sah","Syarat wajib sahaja","Syarat sah sahaja"],correct:0},
+ {term:"Baligh",opts:["Syarat wajib dan syarat sah","Syarat wajib sahaja","Syarat sah sahaja"],correct:1},
+ {term:"Suci daripada haid, nifas dan wiladah",opts:["Syarat wajib dan syarat sah","Syarat wajib sahaja","Syarat sah sahaja"],correct:2},
+ {term:"Mampu",opts:["Syarat wajib dan syarat sah","Syarat wajib sahaja","Syarat sah sahaja"],correct:1}
+ ]},
+ act4:{title:"Aktiviti 4: Susun dan ingat",intro:"Gunakan anak panah untuk susun dua rukun seperti susunan dalam bahan pembelajaran.",sort:["Niat","Tidak melakukan perkara yang membatalkan puasa"]}
+};
+let actScore=0;
+function showActivity(id){
+ const box=document.getElementById('activity-stage');box.classList.remove('hidden');
+ const d=activities[id];let html=`<div class="progress-row"><span>AKTIVITI INTERAKTIF</span><span>${d.title}</span></div><h3>${d.title}</h3><p class="lead">${d.intro}</p>`;
+ if(d.questions){html+=`<div id="act-questions">`;d.questions.forEach((q,i)=>{html+=`<div class="card" style="box-shadow:none;margin-top:14px"><p class="question">${i+1}. ${q.q}</p><div class="answers">${q.a.map((a,j)=>`<button class="answer" onclick="answerActivity(this,'${id}',${i},${j})">${a}</button>`).join('')}</div><div class="feedback" id="act-feedback-${i}"></div></div>`});html+=`</div><p id="act-total" class="notice">Pilih jawapan untuk menyemak aktiviti.</p>`}
+ if(d.matching){html+=`<div id="matching-area">`;d.matching.forEach((m,i)=>{html+=`<div class="match-row"><strong>${m.term}</strong><select id="match-${i}"><option value="">Pilih kategori…</option>${m.opts.map((o,j)=>`<option value="${j}">${o}</option>`).join('')}</select></div>`});html+=`</div><button class="btn btn-primary" onclick="checkMatching()">Semak padanan</button><p id="match-feedback" class="feedback"></p>`}
+ if(d.sort){html+=`<div class="sort-items" id="sort-area">${d.sort.map((s,i)=>`<div class="sort-item" data-index="${i}"><strong>${s}</strong><span class="sort-buttons"><button aria-label="Naik" onclick="moveSort(this,-1)">↑</button><button aria-label="Turun" onclick="moveSort(this,1)">↓</button></span></div>`).join('')}</div><button class="btn btn-primary" style="margin-top:16px" onclick="checkSort()">Semak susunan</button><p id="sort-feedback" class="feedback"></p>`}
+ html+=`<div class="actions"><button class="btn btn-outline" onclick="document.getElementById('activity-stage').classList.add('hidden')">Tutup aktiviti</button></div>`;
+ box.innerHTML=html;box.scrollIntoView({behavior:'smooth',block:'start'});actScore=0;
+}
+function answerActivity(btn,id,qi,ai){
+ const q=activities[id].questions[qi],parent=btn.closest('.card');if(parent.dataset.done)return;parent.dataset.done='1';
+ const buttons=parent.querySelectorAll('.answer');buttons[q.correct].classList.add('correct');
+ const feedback=parent.querySelector('.feedback');if(ai===q.correct){actScore++;feedback.textContent='Betul! '+q.why}else{btn.classList.add('wrong');feedback.textContent='Belum tepat. '+q.why}
+ const total=activities[id].questions.length;document.getElementById('act-total').textContent=`Markah aktiviti: ${actScore}/${document.querySelectorAll('#act-questions .card').length} soalan dijawab setakat ini.`;
+}
+function checkMatching(){let score=0;activities.act3.matching.forEach((m,i)=>{const el=document.getElementById('match-'+i);if(Number(el.value)===m.correct){score++;el.style.borderColor='#4a9a62'}else{el.style.borderColor='#d96959'}});document.getElementById('match-feedback').textContent=`Markah: ${score}/${activities.act3.matching.length}. Semak semula kategori bagi jawapan yang belum tepat.`}
+function moveSort(btn,delta){const item=btn.closest('.sort-item'),parent=item.parentElement;const items=[...parent.children],i=items.indexOf(item),j=i+delta;if(j<0||j>=items.length)return;if(delta<0)parent.insertBefore(item,items[j]);else parent.insertBefore(items[j],item)}
+function checkSort(){const items=[...document.querySelectorAll('#sort-area .sort-item')].map(e=>e.querySelector('strong').textContent);const ok=items[0]==='Niat'&&items[1]==='Tidak melakukan perkara yang membatalkan puasa';document.getElementById('sort-feedback').textContent=ok?'Tahniah! Susunan kamu betul.':'Cuba lagi. Dalam bahan pembelajaran, niat disenaraikan sebagai rukun pertama.'}
+const quiz=[
+ {q:"1. Apakah maksud puasa?",a:["Tidak makan pada waktu malam","Menahan diri daripada perkara yang membatalkan puasa dari terbit fajar hingga terbenam matahari disertai niat","Tidur sepanjang hari"],c:1,e:"Puasa ialah menahan diri daripada perkara yang membatalkan puasa dari terbit fajar hingga terbenam matahari disertai niat."},
+ {q:"2. Puasa Ramadan hukumnya ialah…",a:["Wajib bagi umat Islam yang mampu","Harus untuk semua orang","Sunat sahaja"],c:0,e:"Bahan pembelajaran menyatakan puasa Ramadan wajib bagi umat Islam yang mampu."},
+ {q:"3. Surah apakah yang menjadi dalil puasa dalam pembelajaran ini?",a:["Surah al-Fatihah","Surah al-Baqarah","Surah al-Ikhlas"],c:1,e:"Dalil yang dipelajari ialah Surah al-Baqarah ayat 183."},
+ {q:"4. Apakah tujuan yang disebut pada akhir Surah al-Baqarah ayat 183?",a:["Supaya kamu kaya","Supaya kamu terkenal","Supaya kamu bertakwa"],c:2,e:"Maksud ayat tersebut menyebut tujuan supaya kamu bertakwa."},
+ {q:"5. Berapa rukun puasa yang disenaraikan dalam bahan pembelajaran?",a:["Dua","Tiga","Empat"],c:0,e:"Dua rukun yang disenaraikan ialah niat dan tidak melakukan perkara yang membatalkan puasa."},
+ {q:"6. Yang manakah rukun puasa?",a:["Makan sahur","Niat","Tidur awal"],c:1,e:"Niat ialah rukun pertama dalam bahan pembelajaran."},
+ {q:"7. Puasa bermula pada waktu…",a:["Terbit fajar","Tengah hari","Terbenam matahari"],c:0,e:"Puasa bermula daripada terbit fajar."},
+ {q:"8. Puasa berakhir pada waktu…",a:["Terbit matahari","Terbenam matahari","Tengah malam"],c:1,e:"Puasa berlangsung hingga terbenam matahari."},
+ {q:"9. Yang manakah syarat wajib puasa?",a:["Baligh","Memakai pakaian baharu","Mempunyai telefon"],c:0,e:"Baligh ialah salah satu daripada empat syarat wajib puasa."},
+ {q:"10. Berapakah syarat wajib puasa yang dipelajari?",a:["Dua","Tiga","Empat"],c:2,e:"Empat syarat wajib ialah Islam, baligh, berakal dan mampu."},
+ {q:"11. Yang manakah bukan syarat wajib puasa dalam senarai pembelajaran?",a:["Islam","Mampu","Bertepatan dengan waktunya"],c:2,e:"Bertepatan dengan waktunya disenaraikan sebagai syarat sah puasa."},
+ {q:"12. Suci daripada haid, nifas dan wiladah ialah…",a:["Syarat sah puasa","Dalil puasa","Hukum puasa"],c:0,e:"Syarat ini disenaraikan sebagai salah satu syarat sah puasa."},
+ {q:"13. Yang manakah contoh hari yang diharamkan berpuasa menurut bahan?",a:["Hari Isnin","Hari Raya Aidilfitri","Hari persekolahan"],c:1,e:"Aidilfitri dan Aidiladha disebut sebagai contoh hari yang diharamkan berpuasa."},
+ {q:"14. Islam disenaraikan sebagai…",a:["Syarat wajib sahaja","Syarat sah sahaja","Syarat wajib dan syarat sah"],c:2,e:"Islam disenaraikan dalam kedua-dua kategori."},
+ {q:"15. Apakah sikap yang sesuai ketika belajar tentang puasa?",a:["Berusaha memahami dan mengamalkan ibadah dengan ikhlas","Mengabaikan semua arahan","Meneka tanpa membaca"],c:0,e:"Belajar dengan bersungguh-sungguh membantu kita memahami ibadah puasa."}
+];
+let qi=0,answers=Array(quiz.length).fill(null),checked=Array(quiz.length).fill(false);
+function renderQuiz(){
+ document.getElementById('q-counter').textContent=`Soalan ${qi+1} daripada ${quiz.length}`;
+ document.getElementById('q-score').textContent=`Markah: ${answers.reduce((s,a,i)=>s+(checked[i]&&a===quiz[i].c?1:0),0)}`;
+ document.getElementById('q-progress').style.width=`${(qi/quiz.length)*100}%`;
+ const q=quiz[qi],area=document.getElementById('question-area');
+ area.innerHTML=`<p class="question">${q.q}</p><div class="answers">${q.a.map((a,i)=>`<button class="answer ${answers[qi]===i?'selected':''} ${checked[qi]&&i===q.c?'correct':''} ${checked[qi]&&answers[qi]===i&&i!==q.c?'wrong':''}" ${checked[qi]?'disabled':''} onclick="chooseAnswer(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join('')}</div>`;
+ document.getElementById('quiz-feedback').textContent=checked[qi]?q.e:'Pilih satu jawapan, kemudian tekan “Semak jawapan”.';
+ document.getElementById('next-question').textContent=checked[qi]?(qi===quiz.length-1?'Lihat keputusan':'Soalan seterusnya →'):'Semak jawapan';
+ document.getElementById('q-progress').style.width=`${((qi+(checked[qi]?1:0))/quiz.length)*100}%`;
+}
+function chooseAnswer(i){if(checked[qi])return;answers[qi]=i;renderQuiz()}
+function nextQuestion(){
+ if(!checked[qi]){if(answers[qi]===null){document.getElementById('quiz-feedback').textContent='Pilih satu jawapan dahulu ya.';return}checked[qi]=true;renderQuiz();return}
+ if(qi<quiz.length-1){qi++;renderQuiz();return}
+ showResult();
+}
+function showResult(){
+ const score=answers.reduce((s,a,i)=>s+(checked[i]&&a===quiz[i].c?1:0),0);
+ document.getElementById('question-area').classList.add('hidden');document.getElementById('quiz-feedback').classList.add('hidden');
+ document.getElementById('next-question').classList.add('hidden');
+ document.getElementById('q-progress').style.width='100%';
+ const r=document.getElementById('quiz-result');r.classList.remove('hidden');
+ let msg=score>=13?'Cemerlang! Kamu menguasai kebanyakan isi pembelajaran.':score>=9?'Bagus! Ulang kaji bahagian yang masih mengelirukan.':'Teruskan berusaha. Baca semula nota dan cuba kuiz sekali lagi.';
+ r.innerHTML=`<div class="card" style="text-align:center;background:#eff9ef;box-shadow:none"><div style="font-size:2.5rem">🏆</div><p class="kicker">Keputusan kuiz</p><div class="score-big">${score}<span style="font-size:1.5rem;color:#526c70">/${quiz.length}</span></div><p>${msg}</p><button class="btn btn-primary" onclick="reviewAnswers()">Semak jawapan</button></div>`;
+}
+function reviewAnswers(){
+ const r=document.getElementById('quiz-result');r.innerHTML='<h3>Semakan jawapan</h3>'+quiz.map((q,i)=>`<div class="card" style="box-shadow:none;margin:10px 0"><strong>${q.q}</strong><p class="small">Jawapan betul: ${q.a[q.c]}</p><p class="small">${answers[i]===q.c?'✓ Jawapan kamu betul.':'Jawapan kamu: '+(answers[i]===null?'Belum dijawab':q.a[answers[i]])+'.'} ${q.e}</p></div>`).join('')+`<button class="btn btn-primary" onclick="restartQuiz()">Cuba semula</button>`;
+}
+function restartQuiz(){qi=0;answers=Array(quiz.length).fill(null);checked=Array(quiz.length).fill(false);document.getElementById('question-area').classList.remove('hidden');document.getElementById('quiz-feedback').classList.remove('hidden');document.getElementById('next-question').classList.remove('hidden');document.getElementById('quiz-result').classList.add('hidden');renderQuiz()}
+document.querySelectorAll('#reflection-list input').forEach(el=>el.addEventListener('change',()=>{const n=[...document.querySelectorAll('#reflection-list input')].filter(x=>x.checked).length;document.getElementById('reflection-message').textContent=n===4?'Hebat! Kamu telah menandakan semua kemahiran pembelajaran.':`Kamu telah menandakan ${n} daripada 4 kemahiran. Teruskan ulang kaji!`}));
+renderQuiz();
+</script>
+</body>
+</html>
